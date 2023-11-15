@@ -1,4 +1,4 @@
-<form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+<form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
   <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput class="username" formControlName="username" />

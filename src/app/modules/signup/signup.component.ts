@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     return new FormGroup({
       username: new FormControl('', [
         Validators.required,
-        Validators.minLength(8),
+        Validators.minLength(2),
       ]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
@@ -31,8 +31,8 @@ export class SignupComponent implements OnInit {
   }
 
   signup(): void {
-    this.userService
-      .signup(this.signupForm?.value)
-      .subscribe((msg) => console.log(msg));
+    this.userService.signup(this.signupForm?.value).subscribe((msg) => {
+      console.log(msg);
+    });
   }
 }

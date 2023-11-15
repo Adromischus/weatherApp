@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import { Login } from '../../models/login.interface';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   loginForm?: FormGroup;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.loginForm = this.createFormGroup();
@@ -23,7 +25,11 @@ export class LoginComponent {
     });
   }
 
-  loginSubmit(): void {
-    console.log(this.loginForm?.value);
+  login(): void {
+    const reqBody: Login = {
+      username: this.loginForm?.value.username,
+      password: this.loginForm?.value.password,
+    };
+    this.userService.login(reqBody).subscribe();
   }
 }

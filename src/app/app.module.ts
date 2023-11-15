@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './modules/login/login.component';
 import { SignupComponent } from './modules/signup/signup.component';
+import { LandingPageComponent } from './modules/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { SignupComponent } from './modules/signup/signup.component';
     MainNavComponent,
     LoginComponent,
     SignupComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,6 @@ import { SignupComponent } from './modules/signup/signup.component';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClient,
   ],
   providers: [],
   bootstrap: [AppComponent],
