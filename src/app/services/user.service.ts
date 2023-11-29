@@ -41,7 +41,7 @@ export class UserService {
       .pipe(
         first(),
         tap((tokenObject: { token: string; username: string }) => {
-          this.username = tokenObject.username;
+          localStorage.setItem('username', tokenObject.username);
           localStorage.setItem('token', tokenObject.token);
           this.isUserLoggedIn.next(true);
         }),

@@ -1,11 +1,14 @@
 <form *ngIf="signupForm" [formGroup]="signupForm" (ngSubmit)="signup()">
+  <h2>Sign Up</h2>
   <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput placeholder="username" formControlName="username" />
+    <mat-error *ngIf="signupForm.invalid">Username is required</mat-error>
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Email</mat-label>
     <input matInput placeholder="email@email" formControlName="email" />
+    <mat-error *ngIf="signupForm.invalid">Email is required</mat-error>
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
@@ -15,6 +18,7 @@
       placeholder="password"
       formControlName="password"
     />
+    <mat-error *ngIf="signupForm.invalid">Password is required</mat-error>
   </mat-form-field>
   <p></p>
   <button [disabled]="!signupForm.valid" mat-raised-button type="submit">

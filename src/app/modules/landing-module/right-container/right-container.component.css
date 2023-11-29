@@ -1,0 +1,340 @@
+.right-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-nav-bar{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+}
+/* CSS for nav-bar */
+.nav-bar-tabs{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* CSS for Today tab, hover and active */
+.today{
+    margin-right: 10px;
+    color: grey;
+}
+.today:hover{
+    color: black;
+    cursor: pointer;
+}
+.today-active{
+    color: black;
+}
+
+/* CSS for Week tab, hover and active */
+.week{
+    color: grey;
+}
+.week:hover{
+    color: black;
+    cursor: pointer;
+}
+.week-active{
+    color: black;
+}
+
+/* CSS for underline */
+.underline{
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    margin-top: 1.4rem;
+}
+.underline-today{
+    transform: translate3d(-200%,0,0);
+    transition: 100ms;
+}
+.underline-week{
+    transform: translate3d(-95%,0,0);
+    transition: 100ms;
+}
+
+/* CSS for metric nav-bar */
+.nav-bar-metric{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+.celsius{
+    border-radius: 50%;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    background-color: white;
+    font-size: small;
+}
+.celsius:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.celsius-active{
+    color: white;
+    background-color: black;
+}
+
+.fahrenheit{
+    border-radius: 50%;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    background-color: white;
+    font-size: small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fahrenheit:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.fahrenheit-active{
+    color: white;
+    background-color: black;
+}
+
+/* ******************************************************** */
+/* CSS FOR DATA BOX */
+.right-container-data-box{
+    flex: 12;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 10px;
+}
+
+/* CSS for week cards */
+.right-container-week-card{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 75px;
+    height: 95px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+}
+.card-day{
+    margin: 5px;
+}
+.card-temp-img img{
+    width: 40px;
+    height: 40px;
+}
+.card-temp-value{
+   margin: 2px;
+}
+
+/* CSS for today's cards */
+.right-container-today-card{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS for today's highlights */
+.right-container-todays-highlight{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-todays-highlight-title{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    flex: 2;
+    font-size: small;
+    font-weight: bold;
+}
+
+.right-container-todays-highlight-cards{
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container-todays-highlight-card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 180px;
+    height: 130px;
+   
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.right-container-todays-highlight-card-title{
+    flex: 1;
+    color: grey;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: self-start;
+    margin-left: 20px;
+}
+
+.gauge{
+    flex: 2;
+    width: 70%;
+    max-width: 180px;
+    font-size: 32px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: -20px;
+    margin-top: -20px;
+}
+
+.gauge_body{
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: gray;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.gauge_fill{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: rgb(227, 179, 90);
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge_cover{
+    width: 75%;
+    height: 150%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: white;
+}
+
+.right-containerr-todays-highlight-value{
+    flex: 1;
+    font-size: xx-large;
+    font-weight: 500;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+/* Wind status */
+.wind-status-value{
+    flex: 2;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+.unit{
+    font-size: 16px;
+}
+.wind-status-logo{
+    flex: 1;
+    align-self: self-start;
+    margin-left: 20px;
+}
+.wind-status-logo img{
+    width: 30px;
+    height: 30px;
+}
+
+/* Sunrise & sunset */
+.sunrise-sunset-value{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+.sunrise{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.sunrise-img{
+    flex: 1;
+    margin-right: 10px;
+}
+.sunrise-img img{
+    width: 20px;
+    height: 20px;
+}
+.sunrise-time{
+    flex: 4;
+}
+.sunset{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.sunset-img{
+    flex: 1;
+    margin-right: 10px;
+}
+.sunset-img img{
+    width: 20px;
+    height: 20px;
+}
+.sunset-time{
+    flex: 4;
+}
+
+.humidity-summary{
+    align-self: self-start;
+    font-size: small;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+

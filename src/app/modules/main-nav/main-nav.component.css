@@ -2,10 +2,9 @@ mat-toolbar {
     display: flex;
     justify-content: space-between;
     padding: 50 64px;
-    background-color: rgb(193, 137, 46);
+    background-color: rgb(135, 169, 198);
    
 }
 a, mat-raised-button {
     margin-left: 20px;
-    
 }
