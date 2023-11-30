@@ -19,6 +19,7 @@ import { SignupComponent } from './modules/signup/signup.component';
 import { LandingPageComponent } from './modules/landing-module/landing-page/landing-page.component';
 import { LeftContainerComponent } from './modules/landing-module/left-container/left-container.component';
 import { RightContainerComponent } from './modules/landing-module/right-container/right-container.component';
+import { HometownComponent } from './modules/hometown/hometown.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RightContainerComponent } from './modules/landing-module/right-containe
     LandingPageComponent,
     LeftContainerComponent,
     RightContainerComponent,
+    HometownComponent,
   ],
   imports: [
     BrowserModule,

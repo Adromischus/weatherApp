@@ -1,14 +1,16 @@
 <mat-toolbar>
   <span>
-    <span>Weather App</span>
+    <span>Welcome {{ username }}</span>
   </span>
   <span>
-    <a mat-raised-button routerLink="/login">
-      <span>Login</span>
-    </a>
-    <span class="example-spacer"></span>
-    <a mat-raised-button routerLink="/signup">
-      <span>Signup</span>
-    </a>
+    <button mat-button routerLink="/login">Login</button>
+
+    <button *ngIf="isAuthenticated" mat-button routerLink="/signup">
+      Signup
+    </button>
+
+    <button *ngIf="!isAuthenticated" mat-button routerLink="/hometown">
+      Select your hometown
+    </button>
   </span>
 </mat-toolbar>
