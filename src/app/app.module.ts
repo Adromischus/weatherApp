@@ -11,26 +11,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MainNavComponent } from './modules/main-nav/main-nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { LoginComponent } from './modules/login/login.component';
-import { SignupComponent } from './modules/signup/signup.component';
 import { LandingPageComponent } from './modules/landing-module/landing-page/landing-page.component';
 import { LeftContainerComponent } from './modules/landing-module/left-container/left-container.component';
 import { RightContainerComponent } from './modules/landing-module/right-container/right-container.component';
-import { HometownComponent } from './modules/hometown/hometown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent,
-    LoginComponent,
-    SignupComponent,
     LandingPageComponent,
     LeftContainerComponent,
     RightContainerComponent,
-    HometownComponent,
   ],
   imports: [
     BrowserModule,
